@@ -211,8 +211,8 @@
     <div class="container-fluid">
       <div id="recently-played-row" class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 ml-2 mr-1">
         <!-- <div id="recently-played-row" class="row row-cols-2"> -->
-        <div class="col album-card2 px-1">
-         <!-- <div class="album-card2-cont">
+        <!--<div class="col album-card2 px-1">
+          <div class="album-card2-cont">
             <img src="assets/an-awesome-wave.png" alt="">
             <h5>Alt-J</h5>
             <p>1981 - Album</p>
@@ -530,8 +530,31 @@
 </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="assets/js/register.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+      window.onload = (event) => {
+        let album = []
+        let error = false
+        fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "77135a851emsh445c08beea496f6p1e4242jsn1b2133e3da6f",
+		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com"
+	}
+})
+.then(response => {
+     response.json;
+})
+.then((data) => {
+  console.log("done")
+  console.log(data);
+})
+
+.catch(err => {
+	console.error(err);
+});
+      }
+    </script>
 </body>
   
 
