@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <title>Login Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/f3a1c130e3.js" crossorigin="anonymous"></script>
+    <!-- <script src="spotifyclone.js"></script> -->
+  </head>
+
+  
+  <body>
+  <p style="text-align:center;"><img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Black.png" id="loginlogo" alt="Logo"></p>
+  <hr class = "my-4">
+
+
+  <div class="main-container-login">
+  <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+              
+            </div>
+            
+            <div class="col-12">
+                    <p style="text-align:center;"><strong>To continue, log in to Spotify.</strong></p>
+                   <a ng-href="/en/login/facebook" class="btn roosa-btn btn-block btn-facebook ng-binding" target="_parent" role="button" analytics-on="click" analytics-category="Login View" analytics-event="Facebook Button" analytics-label="{{" clientid="" }}="" href="/en/login/facebook"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook mr-3" viewBox="0 0 16 16">
+  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+</svg>Continue with Facebook</a>
+                    <a ng-href="https://appleid.apple.com/auth/authorize?client_id=com.spotify.accounts&amp;response_type=code&amp;response_mode=form_post&amp;scope=name%20email&amp;state=AQCD3abgoHokM4Homu6KZnWZUR7ypP0RCwQRQYNuKyJwdjF5eowmakHPYh%2FNUB7ffklOLbsPHkXV4qGq%2B%2FMgWpFO%2FG9Mk9wd758Z3Cqepo31OalAfWRWFMUW1VWKU11naiL0p356uRNMSoEQiWs%3D&amp;redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Fapple%2Fredirect" class="btn roosa-btn btn-block btn-black btn-apple ng-binding mb-3" target="_parent" role="button" analytics-on="click" analytics-category="Login View" analytics-event="Apple Button" analytics-label="{{" clientid="" }}="" href="https://appleid.apple.com/auth/authorize?client_id=com.spotify.accounts&amp;response_type=code&amp;response_mode=form_post&amp;scope=name%20email&amp;state=AQCD3abgoHokM4Homu6KZnWZUR7ypP0RCwQRQYNuKyJwdjF5eowmakHPYh%2FNUB7ffklOLbsPHkXV4qGq%2B%2FMgWpFO%2FG9Mk9wd758Z3Cqepo31OalAfWRWFMUW1VWKU11naiL0p356uRNMSoEQiWs%3D&amp;redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Fapple%2Fredirect"><i class="fab fa-apple mr-3"></i>Continue with Apple</a>
+                    
+                    <h6 class="roosa-h6"><span><strong>OR</strong></span></h6>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            
+                                <div class="col-12">
+                                <!-- <form> -->
+  <div class="form-group">
+    
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address or username">
+    
+  </div>
+  <div class="form-group">
+    
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div></div>
+    <div class="buttons-wrap">
+   <div class="container">
+  <div class="row">
+  <div class="col-12">
+            <label class="checkbox">
+              <input ng-model="form.remember" type="checkbox" name="remember" analytics-on="checked" analytics-category="Login View" id="login-remember" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+              Remember me
+              <span class="control-indicator"></span></label>  </div>
+                
+
+              <!-- <div class="col-6 col-md-12"> -->
+  <a href="home.html"><button type="submit" class="btn roosa-btn btn-success mb-3" id="loginButton">LOG IN</button></a>
+          </div><!-- </div> -->
+
+              </div>
+
+   
+
+         
+         
+           </div></div> 
+            </div>
+        
+                                   <div class="row">
+                                    <div class="col-md-12">
+                                    <div class="col">
+                                   <div class="text">
+                                    <p style="text-align:center;"><span style="color:green" id="forgot">Forgot your password?</span></p>
+                                    </div>
+                                    </div>
+        
+                                    <div class="row">
+                                    <div class="col-md-12">
+                                    <div class="col">
+                                    <hr class="my-4">
+                                    <div class="divider">
+                                    </div>
+                                        <p style="text-align:center;"><strong>Don't have an account?</strong></p>
+                                        <a id="sign-up-link" ng-click="onSignupClick()" ng-href="/en/login/signup?continue=https%3A%2F%2Faccounts.spotify.com%2Fen%2Fstatus" class="btn signup-btn btn-block btn-default ng-binding" role="button" href="/en/login/signup?continue=https%3A%2F%2Faccounts.spotify.com%2Fen%2Fstatus">Sign up for Spotify</a>
+                                  
+                                   
+                                 <hr class="my-4">
+                                 <div class="divider">
+                                  </div>
+                                  </div>
+                                    <div class="row">
+                                     
+                                    <div class="col-md-12">
+                                        <p id="terms" style="text-align:center;">If you click "Log in with Facebook" and are not a Spotify user, you will be registered and you agree to Spotify's <span style="color:green">Terms & Conditions</span> and <span style="color:green">Privacy policy</span>.</p>
+                                    </div>
+                            </div> 
+                        </div>
+                         </div>
+            <div class="col-3">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+            </div>  
+            <div class="col-3"> 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="theme-container">
+        <button id="switch" class="btn switch-btn btn-success" onclick="toggleTheme()">Switch</button>
+
+    </div>
+<script>
+        // function to set a given theme/color-scheme
+        function setTheme(themeName) {
+            localStorage.setItem('theme', themeName);
+            document.documentElement.className = themeName;
+        }
+
+        // function to toggle between light and dark theme
+        function toggleTheme() {
+            if (localStorage.getItem('theme') === 'theme-dark') {
+                setTheme('theme-light');
+            } else {
+                setTheme('theme-dark');
+            }
+        }
+
+        // Immediately invoked function to set the theme on initial load
+        (function () {
+            if (localStorage.getItem('theme') === 'theme-dark') {
+                setTheme('theme-dark');
+            } else {
+                setTheme('theme-light');
+            }
+        })();
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

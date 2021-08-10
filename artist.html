@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <title>Artist Page</title>
+    <link
+      rel="stylesheet"  
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script src="spotifyclone.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,400;1,500&display=swap"
+      rel="stylesheet"/>
+  </head>
+  <body class="home-body">
+    <div class="d-none d-sm-flex sidebar-container" id="main-content">
+      <div class="sidebar" >
+        <ul class="nav flex-column navbar-dark d-flex h-60">
+        <li class="nav-item mb-2 text-white">
+          <img class="pl-2 pt-3" src="./logo/spotifiy.png"height = "40px" width="auto" alt="" srcset="">
+        </li>
+        <li class="nav-item text-white ml-2 ">
+         <h6><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+          <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+        </svg> <a href="home.html">Home</h6> </a>
+       
+        </li>
+        <li class="nav-item text-white ml-2 ">
+          <h6><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg><a href="#"> Search</h6></a>
+        </li>
+        <li class="nav-item text-white ml-2 mb-4">
+         <h6> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-distribute-horizontal" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M14.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5zm-13 0a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5z"/>
+          <path d="M6 13a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v10z"/>
+        </svg> <a href="#">Your Library</h6> </a> 
+        </li>
+        <li class="nav-item text-white ml-2"> 
+         <h6> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+          <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
+        </svg><a href="#"> Create Playlist</h6></a>
+        </li>
+        <li class="nav-item text-white ml-2 mb-0">
+          <h6><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+          </svg><a href="#"> Liked Songs</h6></a>
+          
+        </li>
+  
+        </ul>
+        <hr style="color: rgb(116, 113, 113)">
+        <div class="pl-2 pb-5 mb-5 scrollbar-list">
+
+          <!-- style="overflow:scroll; height: 300px;  scrollbar-color: dark; -->
+        
+          <a class="click-me " href="#"><h6>Funky Heavy Bluesy</h6></a>
+          <a class="click-me  " href="#"><h6>Your Top Songs 2020</h6></a>
+   
+          <a class="click-me  " href="#"><h6>In Love With You-</h6></a>
+   
+          <a class="click-me " href="#"><h6>This Is Rod Stewart</h6></a>
+   
+          <a class="click-me " href="#"><h6>FRANCHISE ft.Young Thug...</h6></a>
+   
+          <a class="click-me " href="#"><h6>Your Top Songs 2019</h6></a>
+          <a class="click-me " href="#"><h6>Palleggio</h6></a>
+          <a class="click-me " href="#"><h6>This is Joe Bonamassa</h6></a>
+   
+          <a class="click-me " href="#"><h6>Jun19</h6></a>
+   
+          <a class="click-me " href="#"><h6>Jack 30th Party 2</h6></a>
+   
+          <a class="click-me " href="#"><h6>Jack 30th Party</h6></a>
+          <a class="click-me " href="#"><h6>This is Opeth</h6></a>
+          <a class="click-me " href="#"><h6>Matal Ballads</h6></a>
+          <a class="click-me " href="#"><h6>New Playlist</h6></a>
+   
+          <a class="click-me " href="#"><h6>You Top Songs 2018</h6></a>
+   
+          <a class="click-me " href="#"><h6>Jazz Classics Blune Note Editi...</h6></a>
+        
+        <h6 class="text-white ml-3 fixedLink"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+        </svg><a class="text-white" href="#">  Install App</h6></a>
+       
+  
+  
+        </div>
+          
+       <!-- <hr style="color: rgb(116, 113, 113)"> -->
+          
+      
+        
+     
+      </div>
+      </div>
+      
+       
+      
+
+
+<div class="main-container extra-padding"> 
+  <!-- <div class="container ">  -->
+    <div>
+        <div class="jumbotron jumbotron-fluid img-fluid artists-jumbo" style="background-image: url(assets/background.jpg); background-size: 100%; background-position: top; ">
+          <div class="container for-about">
+            <p class="ml-auto text-white pt-5 pt-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" color="#0084b4" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            </svg> Verified artist</p>
+          <h1 class="display-4 text-white" style="font-weight: bolder;">Queen</h1>
+          <p class="lead text-white pb-3">37,120,733 monthly listeners.</p>
+          </div>
+         
+       </div>
+      </div>
+
+
+      <div class="container-fluid">
+        <!-- <button class="ml-3 btn btn-dark badge-pill" id="arrow1"> -->
+          <a href="home.html">
+          <button class="ml-3 arrow-btn arrow-btn-available" id="arrow1">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+          </a>
+          <a href="album.html">
+            <button class="ml-3 arrow-btn arrow-btn-available" id="arrow2">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </a>
+    
+        <div class="dropdown dropdown-position">
+          
+          <button class="dropdown-login-button dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img id="profilePic" src="https://strive.school/favicon.ico">
+            <span>Strive Student</span>
+          </button>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="login.html">Profile</a>
+            <a class="dropdown-item" href="#">Private Session</a>
+            <a class="dropdown-item" href="#">Settings</a>
+            <a class="dropdown-item" href="#">Update Spotify</a>
+            <div class="dropdown-divider"></div>
+            <a href="login.html" class="dropdown-item" href="#">Log out</a>
+          </div>
+        </div>
+    </div>  
+
+
+
+      <div class="container-fluid artist-songs-container">
+        <div class="top-of-artist-songs mb-3 pt-3">
+        <div class="spotify-circle">
+          <div class="half-of-pause first-pause"></div>
+          <div class="half-of-pause second-pause"></div>
+        </div>
+        <div class="follow"> FOLLOW </div>
+        <div class="dots"> <div class="small-circle"></div>
+        <div class="small-circle"></div>
+          <div class="small-circle"></div></div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-9">
+        <h2 class="section-heading">Popular</h2>
+        <table class="table table-borderless mt-3">
+          <tbody id="artist-body">
+            <tr>
+              <td id="populartitlenumber" scope="row">1</td>
+              <td id="popularcover"><img src="assets/an-awesome-wave.png" alt=""></td>
+              <td id="populartitle">Another One Bites the Dust - Remastered 2011</td>
+              <td id="popularplays">1,012,332,444</td>
+              <td id="popularlenght">3.34</td>
+            </tr>
+            <tr>
+              <td id="populartitlenumber" scope="row">2</td>
+              <td><img src="assets/arctic-monkeys.png" alt=""></td>
+              <td id="populartitle">Bohemian Rhapsody - Remastered 2011</td>
+              <td id="popularplays">1,334,514,321</td>
+              <td id="popularlenght">5.54</td>
+            </tr>
+            <tr>
+              <td id="populartitlenumber" scope="row">3</td>
+              <td><img src="assets/chronic-dre.png" alt=""></td>
+              <td id="populartitle">Don't Stop Me Now - Remastered 2011</td>
+              <td id="popularplays">1,643,777,333</td>
+              <td id="popularlenght">3.20</td>
+            </tr>
+            <tr>
+              <td id="populartitlenumber" scope="row">4</td>
+              <td><img src="assets/illimatic.png" alt=""></td>
+              <td id="populartitle">Under Pressure - Remastered 2011</td>
+              <td id="popularplays">900,225,096</td>
+              <td id="popularlenght">4.08</td>
+            </tr>
+            <tr>
+              <td id="populartitlenumber" scope="row">5</td>
+              <td><img src="assets/hot-fuss.png" alt=""></td>
+              <td id="populartitle">We Will Rock You - Remastered 2011</td>
+              <td id="popularplays">705,225,721</td>
+              <td id="popularlenght">2.02</td>
+            </tr>
+            <!-- <tr>
+              <td scope="row">6</td>
+              <td><img src="assets/grand-corps-malade.png" alt=""></td>
+              <td id="populartitle">I Want to Break Free- Single</td>
+              <td>380,944,996</td>
+              <td>4.18</td>
+            </tr>
+            <tr>
+              <td scope="row">7</td>
+              <td><img src="assets/nevermind.png" alt=""></td>
+              <td id="populartitle">We Are The Champions - Remastered 2011</td>
+              <td>420,934,236</td>
+              <td>2.59</td>
+            </tr>
+            <tr>
+              <td scope="row">8</td>
+              <td><img src="assets/nwa.png" alt=""></td>
+              <td id="populartitle">Crazy Little Thing Called Love - 2011</td>
+              <td>374,499,187</td>
+              <td>2.43</td>
+            </tr>
+            <tr>
+              <td scope="row">9</td>
+              <td><img src="assets/vampire-weekend.PNG" alt=""></td>
+              <td id="populartitle">Radio Gaga- Single</td>
+              <td>318,743,281</td>
+              <td>5.48</td>
+            </tr>
+            <tr>
+              <td scope="row">10</td>
+              <td><img src="assets/vaccines.png" alt=""></td>
+              <td id="populartitle">Somebody To Love - Remastered</td>
+              <td>558,434,487</td>
+              <td>4.56</td>
+            </tr> -->
+          </tbody>
+        </table></div>
+      <div class="d-none d-md-inline col-md-3 artist-pick mb-3">
+        <h2 class="section-heading mb-3">Artist pick</h2>
+        <div class="row">
+          <div class="col-2">
+            <img src="assets/mgmt.png" width="50px" alt="">
+          </div>
+          <div class="col-8 artist-description">
+            <div class="posted"><img class="round-artist" src="assets/nevermind.png" alt=""> <p id="postedBy"> Posted by Queen</p></div>
+            <h3 id="bestOf" >Queen Best of</h3> 
+            <p id="playlist">Playlist</p>
+          </div></div>
+        </div>
+      </div>
+      
+      <button id="artist-row-see" class="see-all-button" onclick="seeMore()"><h4 class="see-all mb-4">SEE MORE</h4></button>
+        <h2 class="section-heading">Popular releases</h2>
+        <div id="popular-release-row" class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6">
+          <!-- <div id="recently-played-row" class="row row-cols-2"> -->
+          <div class="col album-card2 px-1"><a href="album.html">
+            <div class="album-card2-cont">
+              <img src="assets/an-awesome-wave.png" alt="">
+              <h5>Bohemian Rhapsody</h5>
+              <p>1981 - Album</p><div class="play-button-div"> <div class="play-button-bg"></div>
+                <i class="bi bi-play-circle-fill play-button"></i></div>
+            </div></a>
+          </div>
+  
+          <div class="col album-card2 px-1"><a href="album.html?parameter=album1">
+           
+              <div id="news-album-card" class="album-card2-cont" onclick="generateNewsAlbum()">
+              <img src="assets/electric-warrior.png" alt="">
+              <h5>Bohemian Rhapsody (Original Soundtrack)</h5>
+              <p>1977 - Album</p><div class="play-button-div"> <div class="play-button-bg"></div>
+                <i class="bi bi-play-circle-fill play-button"></i></div>
+            </div></a>
+          
+          </div>
+  
+           <div class="col album-card2 px-1"><a href="album.html?parameter=album2">
+             
+            <div class="album-card2-cont">
+              <img src="assets/dogrel.png" alt="">
+              <h5>News of the World</h5>
+              <p>2019 - Album</p><div class="play-button-div"> <div class="play-button-bg"></div>
+                <i class="bi bi-play-circle-fill play-button"></i></div>
+            </div></a>
+          </div>
+  
+          <div class="col album-card2 px-1"><a href="album.html">
+            <div class="album-card2-cont">
+              <img src="assets/mgmt.png" alt="">
+              <h5>MGMT</h5>
+              <p>2009 - Album</p><div class="play-button-div"> <div class="play-button-bg"></div>
+                <i class="bi bi-play-circle-fill play-button"></i></div>
+            </div></a>
+          </div>
+  
+          <div class="col album-card2 px-1"><a href="album.html">
+            <div class="album-card2-cont">
+              <img src="assets/nevermind.png" alt="">
+              <h5>Nirvana</h5>
+              <p>1992 - Album</p><div class="play-button-div"> <div class="play-button-bg"></div>
+                <i class="bi bi-play-circle-fill play-button"></i></div>
+            </div></a>
+          </div>
+  
+          <div class="col album-card2 px-1"><a href="album.html">
+            <div class="album-card2-cont">
+              <img src="assets/nwa.png" alt="">
+              <h5>N.W.A.</h5>
+              <p>1994 - Album</p><div class="play-button-div"> <div class="play-button-bg"></div>
+                <i class="bi bi-play-circle-fill play-button"></i></div>
+            </div></a>
+          </div>
+  
+          <div class="col album-card2 px-1"><a href="album.html">
+            <div class="album-card2-cont">
+              <img src="assets/radiohead.png" alt="">
+              <h5>Radiohead</h5>
+              <p>1999 - Album</p><div class="play-button-div"> <div class="play-button-bg"></div>
+                <i class="bi bi-play-circle-fill play-button"></i></div>
+            </div></a>
+          </div>
+  
+          <div class="col album-card2 px-1"><a href="album.html">
+            <div class="album-card2-cont">
+              <img src="assets/sigh-no-more.png" alt="">
+              <h5>Mumford & Sons</h5>
+              <p>2007 - Album</p><div class="play-button-div"> <div class="play-button-bg"></div>
+                <i class="bi bi-play-circle-fill play-button"></i></div>
+            </div></a>
+          </div>
+  
+        </div>
+
+</div>
+      </div>
+<div class="container-fluid playbar">
+  <div class="row">
+    <div class="col-2 leftFooter d-none d-sm-none d-md-flex">
+      <!-- horizontal Card - currently played Song -->
+            <div class="currentlyPlayed">
+                <img src="https://www.sleek-mag.com/wp-content/uploads/2016/08/AlbumCovers_Blonde.jpg"
+                class="img-fluid"
+                id="footercover">
+            </div>
+            <div class="currentPlayedSongInfo ml-2 mt-1">
+              <p class="card-text my-1 ml-2" id="footerAlbum">Blond</p>
+              <p class="card-text my-1 ml-2" id="footerArtist"><small>Frank Ocean</small></p>
+            </div>
+            <div id="heart">
+              <button id="footerButton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="lightgrey" class="bi bi-suit-heart ml-2" viewBox="0 0 16 16">
+  <path d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+</svg>
+              </button>
+            </div>
+    </div>
+    <div class="col-8 middleFooter mt-2">
+      <div class="col-12 mt-2">
+        <div id="shuffle">
+          <button id="footerButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="lightgrey" class="bi bi-shuffle" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+</svg>
+          </button>
+        </div>
+
+        <div id="backward">
+          <button id="footerButton">
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="lightgrey" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+    <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+  </svg>
+          </button>
+        </div>
+
+        <div id="play">
+          <button id="footerButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+</svg>
+        </button>
+        </div>
+
+        <div id="forward">
+          <button id="footerButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="lightgrey" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+    <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+  </svg>
+          </button>
+        </div>
+
+        <div id="repeat">
+          <button id="footerButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="lightgrey" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+  <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+  <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+</svg>
+          </button>
+        </div>
+      
+      </div>
+      <div class="col-12">
+        <p id="minute1" class="mx-2 my-2" color="white"><small>1:32</small></p>
+        <progress class="mx-2 my-2" id="file" max="190" value="120" fill="white"></progress>
+        <p id="minute2" class="mx-2 my-2" color="white"><small>2:34</small></p>
+      </div>
+    </div>
+    <div class="col-2 rightFooter mt-4 d-none d-sm-none d-md-flex">
+        <div id="queue">
+          <button id="footerButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-music-note-list" viewBox="0 0 16 16">
+  <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2z"/>
+  <path fill-rule="evenodd" d="M12 3v10h-1V3h1z"/>
+  <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1V2.82z"/>
+  <path fill-rule="evenodd" d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"/>
+</svg>
+          </button>
+        </div>
+
+        <div id="device">
+          <button id="footerButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-music-player" viewBox="0 0 16 16">
+  <path d="M4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V3zm1 0v3h6V3H5zm3 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+  <path d="M11 11a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H4z"/>
+</svg>
+          </button>
+        </div>
+
+        <div id="volume" class="mr-1">
+          <button id="footerButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-volume-down" viewBox="0 0 16 16">
+  <path d="M9 4a.5.5 0 0 0-.812-.39L5.825 5.5H3.5A.5.5 0 0 0 3 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 9 12V4zM6.312 6.39 8 5.04v5.92L6.312 9.61A.5.5 0 0 0 6 9.5H4v-3h2a.5.5 0 0 0 .312-.11zM12.025 8a4.486 4.486 0 0 1-1.318 3.182L10 10.475A3.489 3.489 0 0 0 11.025 8 3.49 3.49 0 0 0 10 5.525l.707-.707A4.486 4.486 0 0 1 12.025 8z"/>
+</svg>
+          </button>
+        </div>
+        
+        <progress id="volumeProgress" max="80" value="70" fill="white"></progress>
+        
+    </div>
+
+  </div>
+</div>
+<br>
+<!--
+
+      <div class="footercontainer">
+        <footer class="footer">
+              <div class="container roosa-container">
+              <div id="play">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+        </svg>
+        </div>
+        <div id="forward">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+          </svg>
+        </div>
+        <div id="backwards">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+          </svg>
+        </div>
+        <div id="shuffle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-shuffle" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+          <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+        </svg>
+        </div>
+        <div id="repeat">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+          <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+          <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+        </svg>
+        </div>
+        <div id="heart">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-suit-heart" viewBox="0 0 16 16">
+          <path d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+        </svg>
+        </div>
+        <div class="footer-icons-right d-none d-sm-block">
+        <div id="queue">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-list" viewBox="0 0 16 16">
+          <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2z"/>
+          <path fill-rule="evenodd" d="M12 3v10h-1V3h1z"/>
+          <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1V2.82z"/>
+          <path fill-rule="evenodd" d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+        </div>
+        <div id="device">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-music-player" viewBox="0 0 16 16">
+          <path d="M4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V3zm1 0v3h6V3H5zm3 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          <path d="M11 11a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+          <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H4z"/>
+        </svg>
+        </div></div>
+        <div id="volume">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-volume-down" viewBox="0 0 16 16">
+          <path d="M9 4a.5.5 0 0 0-.812-.39L5.825 5.5H3.5A.5.5 0 0 0 3 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 9 12V4zM6.312 6.39 8 5.04v5.92L6.312 9.61A.5.5 0 0 0 6 9.5H4v-3h2a.5.5 0 0 0 .312-.11zM12.025 8a4.486 4.486 0 0 1-1.318 3.182L10 10.475A3.489 3.489 0 0 0 11.025 8 3.49 3.49 0 0 0 10 5.525l.707-.707A4.486 4.486 0 0 1 12.025 8z"/>
+        </svg>
+        </div>
+        </div>
+          
+          
+         <progress id="file" max="80" value="70" fill="white"></progress>
+          
+          <div class='holder'>
+          <img src="https://www.sleek-mag.com/wp-content/uploads/2016/08/AlbumCovers_Blonde.jpg">
+          </div>
+          <div>
+          <progress id="volumeprogress" max="80" value="60" fill="white"></progress>
+          </div>
+          <div class="albumname" color="white"><h3>Blond</h3><h4>Frank Ocean</h4></div>
+          <div class="minutes" color="white"><h5>2:28</h5><h6>3:36</h6></div>
+        
+            </footer>
+            </div>
+-->
+  </body>
+</html>
