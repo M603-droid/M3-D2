@@ -531,30 +531,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script>
-      window.onload = (event) => {
-        let album = []
-        let error = false
-        fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "77135a851emsh445c08beea496f6p1e4242jsn1b2133e3da6f",
-		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com"
-	}
-})
-.then(response => {
-     response.json;
-})
-.then((data) => {
-  console.log("done")
-  console.log(data);
-})
-
-.catch(err => {
-	console.error(err);
-});
-      }
-    </script>
+    <script src="/deezer.js"></script>
 </body>
   
 
